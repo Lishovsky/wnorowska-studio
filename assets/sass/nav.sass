@@ -1,0 +1,202 @@
+$goldColor: #BE9722
+$greyColor: #727272
+$cremeColor: #FFF7EA
+$blackColor: #1e1e1e
+$whiteColor: #EBEBEB
+
+body
+    header
+        background: $blackColor
+        position: fixed
+        left: 0
+        top: 0
+        width: 100%
+        height: 100px
+        padding: 0 10vw
+        z-index: 999
+        box-sizing: border-box
+        nav
+            position: relative
+            display: flex
+            max-width: 1240px
+            margin: 0 auto
+            height: 100%
+            align-items: center
+            justify-content: space-between
+            #nav_logo
+                height: 100%
+                a
+                    height: 100%
+                    display: flex
+                    align-items: center
+                    img
+                        height: 70%
+            .menu
+                margin-left: 80px
+                display: flex !important
+            ul
+                li
+                    list-style: none
+                    line-height: 50px
+                    position: relative
+                    border-radius: 10px
+                    box-sizing: border-box
+                    &:hover > ul
+                        top: 75px
+                        left: 0px
+                        width: 200px
+                        opacity: 1
+                        visibility: visible
+                        transition: all 0.2s ease-in-out
+                    a
+                        color: $whiteColor
+                        font-size: 13px
+                        padding: 9px 17px
+                        border-radius: 5px
+                        transition: all 0.1s ease
+                        text-transform: uppercase
+                        &:hover
+                            color: $goldColor
+                .sub-menu
+                    position: absolute
+                    display: flex
+                    flex-direction: column
+                    background: #f1d9b2
+                    top: 75px
+                    left: 0%
+                    transform: translateX(10%)
+                    z-index: -1
+                    opacity: 0
+                    visibility: hidden
+                    li
+                        position: relative
+                        a
+                            color: $greyColor
+                            border-bottom: 1px solid #ece3d0
+                            display: block
+                            width: 100%
+                            line-height: 30px
+                            border-radius: 0px!important
+                        &:hover > ul
+                            top: 0
+                            // transform: translateX(100%)
+                            left: 100%
+                    ul
+                        position: absolute
+                        top: 0
+                        transform: translateX(1%) !important
+        #nav_contactBox
+            display: flex
+            align-items: center
+            span
+                font-size: 14px
+                color: #fff
+                margin-left: 25px
+        #nav_toggler
+            display: none
+
+@media only screen and (max-width: 1300px)
+    body
+        header
+            height: 80px
+            #nav_toggler
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                width: 30px
+                height: 25px
+                position: absolute
+                right: 10vw
+                top: 50%
+                transform: translateY(-50%)
+                z-index: 9999
+                span
+                    background: #fff
+                    height: 4px
+                    width: 100%
+                    transition: 300ms
+            nav
+                ul
+                    margin-top: 0px
+                    li:nth-child(1)
+                        margin-top: 10vh !important
+                    li
+                        list-style: none
+                        line-height: 6vh
+                        position: relative
+                        border-radius: 10px
+                        box-sizing: border-box
+                        &:hover > ul
+                            position: relative
+                            top: -100%
+                            display: flex
+                            left: 0
+                            height: auto
+                            width: 100%
+                            transition: all 0s ease-in-out
+                        a
+                            color: #000
+                            font-size: 14px
+                            padding: 9px 17px
+                            border-radius: 5px
+                            transition: all 0.1s ease
+                            text-transform: uppercase
+                            &:hover
+                                color: $goldColor
+                    .sub-menu
+                        position: relative
+                        display: none
+                        flex-direction: column
+                        background: #fafafa !important
+                        top: -80px
+                        margin-top: 0px !important
+                        transform: translateX(0vh) !important
+                        z-index: 0 !important
+                        opacity: 0
+                        visibility: hidden
+                        li:nth-child(1)
+                            margin-top: 0vh !important
+                        li
+                            position: relative
+                            a
+                                color: $greyColor
+                                border-bottom: 1px solid #ffffff
+                                display: block
+                                width: 100%
+                                line-height: 2vh
+                                border-radius: 0px!important
+                            &:hover > ul
+                                display: block
+                                position: relative
+                                left: -100vh
+                                top: 0% !important
+                        .sub-menu:nth-child(2)
+                            position: absolute
+                            top: 0 !important
+                            margin-top: 0vh !important
+                            z-index: 0 !important
+                        .sub-menu
+                            left: 0vw !important
+                            top: 0 !important
+                            transform: translateX(0vh) !important
+                            z-index: 0 !important
+                            li
+                                left: 0vw !important
+                                background: #eee
+                .menu
+                    position: absolute
+                    left: -10vw
+                    top: 0
+                    margin-left: 0px
+                    width: 100vw
+                    height: calc(100vh - 80px)
+                    margin-top: 80px
+                    text-align: center
+                    display: block !important
+                    transform: translateX(-100vh)
+                    transition: 300ms all ease-in-out
+                .active
+                    transform: translateX(0vh) !important
+                    background: #fff
+                #nav_contactBox
+                    display: none

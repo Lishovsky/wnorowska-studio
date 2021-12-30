@@ -1,0 +1,296 @@
+$goldColor: #BE9722
+$greyColor: #727272
+$cremeColor: #FFF7EA
+$blackColor: #1e1e1e
+$whiteColor: #EBEBEB
+
+*, body
+    margin: 0
+    padding: 0
+    text-decoration: none
+    box-sizing: border-box
+    font-family: 'Noto Serif', serif
+    text-transform: uppercase
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    main
+        ul
+            display: block
+            text-align: left
+            margin: 1.5vh 0 !important
+            text-transform: uppercase
+            color: $greyColor
+        p, span
+            text-align: center
+            text-transform: uppercase
+            color: $greyColor
+        section
+            width: 100%
+            text-align: center
+            padding: 0 10vw
+            box-sizing: border-box
+            h2
+                color: $goldColor
+                font-weight: 700
+                font-size: 36px
+                text-transform: uppercase
+            span
+                text-transform: uppercase
+                font-size: 16px
+                color: $greyColor
+            .blog
+                justify-content: flex-start
+                h2
+                    text-align: center
+                    margin: 0vh 0% 5vh 0% !important
+                p
+                    text-align: left !important
+            .container
+                max-width: 1240px
+                box-sizing: border-box
+                height: 75vh
+                margin: 0 auto
+                display: flex
+                justify-content: space-between
+                .half
+                    width: 50%
+                    height: 100%
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    .global_image
+                        height: 100%
+        .firstElement
+            margin-top: calc(10vh + 100px) !important
+            min-height: 75vh !important
+            .container
+                display: flex
+                justify-content: flex-start !important
+                flex-direction: column
+                height: auto !important
+                p
+                    text-align: justify !important
+        .creme
+            background: #FFF7EA
+        .white
+            background: #fff
+        #sectionOne
+            .container
+                height: 75vh !important
+                margin-top: calc(5vh + 100px)
+                .half
+                    .global_image
+                        display: flex
+                        align-items: center
+                        overflow: hidden
+                        position: relative
+                        #sectionOne_image_first
+                            position: absolute
+                            top: 3%
+                            width: 90%
+                        #sectionOne_image_last
+                            width: 90%
+                            margin-left: auto
+        #gallery
+            margin-top: 10vh
+            padding: 10vh 10vw
+            box-sizing: border-box
+            text-align: center
+            h2
+                margin: 0vh 0% 5vh 0% !important
+            .wp-block-gallery
+                margin: 0 auto
+                max-width: 1240px
+                display: flex
+                justify-content: center
+        #contact
+            margin: 10vh 0%
+            .container
+                height: 75vh
+                .half
+                    text-align: left
+                    .global_image
+                        display: flex
+                        align-items: center
+                        overflow: hidden
+                        position: relative
+                        #contact_image_first
+                            position: absolute
+                            top: 3%
+                            width: 90%
+                .half:nth-child(2)
+                    padding-left: 3vw
+                    ul
+                        display: flex
+                        flex-direction: column
+                        list-style: none
+                        margin: 5vh 0
+                        li
+                            position: relative
+                            margin: 15px 0%
+                            display: flex
+                            img
+                                width: 30px
+                                height: 30px
+                            span
+                                position: absolute
+                                left: 60px
+                                top: 50%
+                                transform: translateY(-50%)
+                    #contact_right_socialBox
+                        a
+                            margin-right: 20px
+        #aboutUs
+            .container
+                margin-top: 130px
+                height: 75vh !important
+                margin-top: calc(5vh + 100px)
+                .half:first-child
+                    width: calc( (100% / 6) * 2)
+                    height: 100%
+                    display: flex
+                    justify-content: center
+                    .global_image
+                        height: 100%
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        overflow: hidden
+                        position: relative
+                        #contact_image_first
+                            width: 90%
+                .half:last-child
+                    width: calc( (100% / 6) * 4)
+                    padding-left: 20px
+                    h2
+                        margin-bottom: 5vh
+                        text-align: left
+                    p
+                        text-align: justify
+        #notFound
+            .container
+                height: 75vh !important
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                h2
+                    font-size: 90px
+                p
+                    text-transform: uppercase
+                    color: $greyColor
+                    font-size: 30px
+                    margin: 20px 0px
+                    text-align: center !important
+                a
+                    color: $goldColor
+                    font-size: 30px
+                    text-transform: uppercase
+
+    footer
+        text-align: center
+        font-size: 10px
+        color: $goldColor
+        padding: 3vh 10vw
+        a
+            color: $goldColor
+
+@media only screen and (max-width: 1300px)
+    body
+        main
+            section
+                h2
+                    font-size: 24px
+                    text-align: center !important
+                p, span
+                    font-size: 14px
+                    text-align: center !important
+                .blog
+                    h2
+                        text-align: center !important
+                    p
+                        text-align: justify !important
+                .container
+                    height: auto !important
+                    flex-direction: column
+                    align-items: center
+                    .half
+                        width: 100%
+                        height: auto
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        .global_image
+                            height: 100%
+                            position: relative
+                            #sectionOne_image_first
+                                position: relative !important
+                                width: 100% !important
+                            #sectionOne_image_last
+                                position: relative !important
+                                width: 100% !important
+                            #contact_image_first
+                                position: relative !important
+                                width: 100% !important
+            #sectionOne
+                .container
+                    position: relative
+                    height: auto !important
+                    .half:nth-child(2)
+                        position: absolute
+                        top: 65%
+                        background: #ffffffaa
+                        .global_image
+                            padding: 0 10vw
+                            position: relative
+            #aboutUs
+                .container
+                    height: auto !important
+                    .half:first-child
+                        width: 100%
+                    .half:last-child
+                        width: 100%
+                        padding-left: 0px
+                        h2
+                            margin: 5vh 0%
+                            text-align: center
+                        p
+                            text-align: justify
+            #contact
+                margin: 10vh 0%
+                .container
+                    height: auto
+                    .half
+                        text-align: center
+                        .global_image
+                            display: flex
+                            align-items: center
+                            overflow: hidden
+                            margin-bottom: 10vh
+                    .half:nth-child(2)
+                        padding-left: 0vw
+                        ul
+                            display: flex
+                            flex-direction: column
+                            list-style: none
+                            margin: 5vh 0
+                            li
+                                position: relative
+                                padding: 3vh 0%
+                                display: flex
+                                flex-direction: column
+                                text-align: center !important
+                                border-bottom: 1px solid #f1f1f1
+                                &:last-child
+                                    border: none
+                                img
+                                    width: 30px
+                                    height: 30px
+                                    margin-bottom: 4vh
+                                    position: relative
+                                    left: 50%
+                                    transform: translateX(-50%)
+                                span
+                                    position: relative
+                                    left: 0
+                                    font-size: 15px
